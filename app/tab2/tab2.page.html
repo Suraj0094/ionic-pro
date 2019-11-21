@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ng-container *ngFor="let data of bookmarkedList"> 
+    <ion-card>
+       <ion-label>{{data?.name}}</ion-label>
+    </ion-card>
+  </ng-container> 
+
+</ion-content>

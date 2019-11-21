@@ -1,0 +1,24 @@
+
+
+<ion-content>
+ <ion-card class="domainForm"> 
+    
+      <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input [(ngModel)]="user.first_name"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+            <ion-label position="floating">Last Name</ion-label>
+            <ion-input [(ngModel)]="user.last_name"></ion-input>
+      </ion-item>
+      
+    <ion-button size="small" class="button-align-center" (click)="submit(user)">Round Button</ion-button>
+  </ion-card> 
+</ion-content>
+<div class="footer">
+    <p id="copyright" style="color:white;">
+      <span>Movie App</span> &copy;
+      <span class="appName"><strong>Business OS</strong></span>
+    </p>
+</div>

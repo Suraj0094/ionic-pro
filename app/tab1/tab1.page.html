@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        <ion-icon (click)="openMenu()" name="menu"></ion-icon>
+        Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ng-container *ngFor="let data of movieList"> 
+    <ion-card (click)="bookMark(data)">
+       <ion-label>{{data?.name}}</ion-label>
+    </ion-card>
+   </ng-container>  
+</ion-content>

@@ -1,20 +1,22 @@
 
 
 <ion-content>
- <ion-card class="domainForm"> 
-    
-      <ion-item>
-          <ion-label position="floating">First Name</ion-label>
-          <ion-input [(ngModel)]="user.first_name"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-            <ion-label position="floating">Last Name</ion-label>
-            <ion-input [(ngModel)]="user.last_name"></ion-input>
-      </ion-item>
+ <form [formGroup]="loginForm" class="form-group">  
+    <ion-card class="domainForm"> 
       
-    <ion-button size="small" class="button-align-center" (click)="submit(user)">Round Button</ion-button>
-  </ion-card> 
+            <ion-item>
+                <ion-label position="floating">First Name</ion-label>
+                <ion-input [(ngModel)]="user.first_name" [formControl]="loginForm.controls['first_name']"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                  <ion-label position="floating">Last Name</ion-label>
+                  <ion-input [(ngModel)]="user.last_name" [formControl]="loginForm.controls['last_name']"></ion-input>
+            </ion-item>
+        <ion-button size="small" class="button-align-center" (click)="submit(user)">Round Button</ion-button>
+    </ion-card> 
+ </form> 
+
 </ion-content>
 <div class="footer">
     <p id="copyright" style="color:white;">
